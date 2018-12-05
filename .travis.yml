@@ -7,7 +7,7 @@ script:
 - ./build.sh dsw_rollfold.pdf
 deploy:
   provider: releases
-  api_key: GH_TOKEN
+  api_key: $GH_TOKEN
   file:
   - _build/dsw_rollfold.pdf
   skip_cleanup: true
