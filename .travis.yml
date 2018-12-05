@@ -1,0 +1,16 @@
+sudo: required
+dist: trusty
+before_install:
+- sudo apt-get -qq update && sudo apt-get install imagemagick
+script:
+- mkdir _build
+- ./build.sh _build/dsw_rollfold.pdf 
+deploy:
+  provider: releases
+  api_key:
+    secure: [YOUR KEY]
+  file:
+  - _build/dsw_rollfold.pdf
+  skip_cleanup: true
+  on:
+    tags: true
