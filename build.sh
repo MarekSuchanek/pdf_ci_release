@@ -12,9 +12,9 @@ echo "Installing fonts"
 mkdir ~/.fonts 2> /dev/null
 cd ~/.fonts
 wget https://www.wfonts.com/download/data/2014/11/28/corbel/corbel.zip
-unzip corbel.zip
+unzip -o corbel.zip
 wget https://www.wfonts.com/download/data/2014/05/29/impact/impact.zip
-unzip impact.zip
+unzip -o impact.zip
 
 cd $PROJECT_ROOT
 
