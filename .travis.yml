@@ -1,7 +1,7 @@
 sudo: required
 dist: trusty
 before_install:
-- sudo apt-get -qq update && sudo apt-get install imagemagick
+- sudo apt-get -qq update && sudo apt-get install librsvg2-bin pdftk
 script:
 - mkdir _build
 - ./build.sh dsw_rollfold.pdf
