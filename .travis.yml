@@ -4,14 +4,12 @@ before_install:
 - sudo apt-get -qq update && sudo apt-get install inkscape pdftk
 script:
 - mkdir _build
-- ./build.sh dsw_rollfold.pdf
+- ./build.sh dsw_rollfold_$TRAVIS_TAG.pdf
 deploy:
   provider: releases
   api_key: $GH_TOKEN
   file:
-  - _build/dsw_rollfold.pdf
-  - _build/parts/dsw_rollfold_side1.pdf
-  - _build/parts/dsw_rollfold_side2.pdf
+  - _build/dsw_rollfold_$TRAVIS_TAG.pdf
   skip_cleanup: true
   on:
     tags: true
