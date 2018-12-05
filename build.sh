@@ -21,6 +21,6 @@ mkdir -p _build/parts 2>/dev/null
 for SVG_FILE in $(ls *.svg);
 	do
 		PDF_FILE=$(echo $SVG_FILE | sed 's/\.svg$/\.pdf/')
-		rsvg-convert -f pdf -o_build/parts/$PDF_FILE $SVG_FILE
+		rsvg-convert -f pdf -o _build/parts/$PDF_FILE $SVG_FILE
 done
 pdftk $(ls _build/parts/*.pdf) cat output _build/$FINAL
